@@ -34,6 +34,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -43,17 +44,38 @@ h1 {
   color: #369;
 }
 
-.todo-list {
-  .operate {
-    cursor: pointer;
-    padding: 2px;
-    &:hover {
-      color: #fff;
-      background-color: #369;
+.App {
+  .todo-list {
+    .operate {
+      cursor: pointer;
+      padding: 2px;
+
+      &:hover {
+        color: #fff;
+        background-color: #369;
+      }
+
+      &.done {
+        margin-left: auto;
+        margin-right: 10px;
+      }
     }
-    &.done {
-      margin-left: auto;
-      margin-right: 10px;
+
+    &-item {
+      position: relative;
+      padding-top: 25px;
+    }
+
+    &-item:nth-child(odd) {
+      background-color: aliceblue;
+    }
+
+    .create-at {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 12px;
+      color: grey;
     }
   }
 }

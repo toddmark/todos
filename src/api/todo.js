@@ -1,11 +1,11 @@
 import {get, post} from '@/utils/http';
 
-
-
-console.log(get, post);
-
 const addTodo = (data) => {
-  post('/addtodo', data)
+  return post('/addtodo', data)
 }
 
-export {addTodo}
+const getList = (data) => {
+  return get('/getList', data)
+}
+
+export {addTodo, getList}
